@@ -73,6 +73,40 @@ import { RowItemProps, Table } from '@/components/Table';
     invalid: [
       {
         code: `
+// GraphQL
+import {
+    FulfillmentTask,
+    fulfillmentTaskDelete,
+    fulfillmentTaskUpdate,
+    fulfillmentTaskUpdateStatus,
+} from '@/gql/fulfillmentTaskGql';
+import {
+    ArtworkApproval,
+    betaArtworkApprovalDelete,
+} from '@/gql/betaArtworkApprovalGql';
+import { betaPOPDelete, POP } from '@/gql/betaPOPGql';
+
+// GraphQL
+import {
+    FTA,
+    fulfillmentTaskAssignmentsUpdate,
+} from '@/gql/fulfillmentTaskAssignmentGql';
+import { Contact, contactsQuery } from '@/gql/contactGql';
+import { managerAccountRelationships } from '@/gql/managerAccountsGql';
+import { MARel } from '@/gql/types';
+        `,
+        errors: [
+          {
+            message: 'Duplicate group found. Please remove.',
+            line: 16,
+            endLine: 19,
+            column: 1,
+            endColumn: 45,
+          },
+        ]
+      },
+      {
+        code: `
 // Modals
 import { ArtworkApproverType } from '@/modals/PreviewArtworkModal';
 import { FTA } from '@/gql/fulfillmentTaskAssignmentGql';
@@ -84,18 +118,18 @@ import { CSSProp } from 'styled-components';
         `,
         errors: [
           {
-            message: "Externals should be the first import.",
-            line: 3,
-            endLine: 3,
-            column: 1,
-            endColumn: 68,
-          },
-          {
             message: "@/gql should be in a GraphQL group.",
             line: 4,
             endLine: 4,
             column: 1,
             endColumn: 58,
+          },
+          {
+            message: "Externals should be the first import.",
+            line: 7,
+            endLine: 7,
+            column: 1,
+            endColumn: 42,
           },
         ],
       },
