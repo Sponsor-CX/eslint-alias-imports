@@ -38,14 +38,34 @@ for (const ruleTester of [jsRuleTester, tsRuleTester]) {
       {
         code: `
 // Externals
-import { FC, ReactElement } from 'react';
-import { IconProps, SemanticShorthandItem } from 'semantic-ui-react';
-import { CSSProp } from 'styled-components';
+import React from 'react';
+import {
+    Button as SemanticButton,
+    Form,
+    Icon,
+    Popup,
+    TextArea,
+} from 'semantic-ui-react';
+import 'styled-components/macro';
+import * as tokens from '@sponsorcx/sponsorcx-style';
+
+// Helpers
+import { formatDollar } from '@/helpers/math';
+
+// Inventory
+import { AgreementInventoryItem } from '@/inventory/interfaces';
 
 // GraphQL
-import { ArtworkApproval } from '@/gql/betaArtworkApprovalGql';
-import { POP } from '@/gql/betaPOPGql';
-import { FulfillmentTask } from '@/gql/fulfillmentTaskGql';
+import { Package, PackageInvRel } from '@/gql/packageGql';
+
+// Modals
+import { calculatePackageInvRelRateFromPackageRate } from '@/modals/PackageCreate';
+
+// Components
+import { UnitEditInPlace } from '@/components/packageRow/styles';
+import { ConfirmActionPopup } from '@/components/ConfirmActionPopup';
+import { EditInPlaceField } from '@/components/EditInPlaceField';
+import { RowItemProps, Table } from '@/components/Table';
         `,
       },
     ],
@@ -71,11 +91,29 @@ import { CSSProp } from 'styled-components';
             endColumn: 68,
           },
           {
-            message: "@/gql should not be in the Modals group.",
+            message: "@/gql should be in a GraphQL group.",
             line: 4,
             endLine: 4,
             column: 1,
             endColumn: 58,
+          },
+        ],
+      },
+      {
+        code: `
+import { ArtworkApproverType } from '@/modals/PreviewArtworkModal';
+import { FTA } from '@/gql/fulfillmentTaskAssignmentGql';
+import { FC, ReactElement } from 'react';
+import { IconProps, SemanticShorthandItem } from 'semantic-ui-react';
+import { CSSProp } from 'styled-components';
+        `,
+        errors: [
+          {
+            message: "Imports should be grouped.",
+            line: 2,
+            endLine: 2,
+            column: 1,
+            endColumn: 68,
           },
         ],
       },
