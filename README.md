@@ -34,11 +34,11 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "sponsorcx/alias-imports": 2
+        "sponsorcx/alias-imports": 1
     }
 }
 ```
 
 ## Supported Rules
-- [Alias Imports](docs/rules/alias-imports.md)
+- [Alias Imports](https://github.com/Sponsor-CX/eslint-plugin-sponsorcx/blob/main/docs/rules/alias-imports.md)
 

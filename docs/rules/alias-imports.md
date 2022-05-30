@@ -43,7 +43,7 @@ To use this in your eslint config file, you will define a list of aliases and
 friendly names for them, such as the defaults:
 
 ```json
-  "alias-imports": [
+  "sponsorcx/alias-imports": [
       1,
       {
         "externals": "Externals",
