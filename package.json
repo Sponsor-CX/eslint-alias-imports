@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-sponsorcx",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "SponsorCX ESLint plugin",
   "keywords": [
     "eslint",
