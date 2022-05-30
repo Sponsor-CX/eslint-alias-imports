@@ -46,17 +46,19 @@ friendly names for them, such as the defaults:
   "sponsorcx/alias-imports": [
       1,
       {
-        "externals": "Externals",
-        "gql": "GraphQL",
-        "modals": "Modals",
-        "helpers": "Helpers",
-        "hooks": "Hooks",
-        "interfaces": "Interfaces",
-        "features": "Features",
-        "pages": "Pages",
-        "components": "Components",
-        "utils": "Utils",
-        "services": "Services"
+          "externals": "Externals",
+          "gql": "GraphQL",
+          "modals": "Modals",
+          "helpers": "Helpers",
+          "hooks": "Hooks",
+          "interfaces": "Interfaces",
+          "features": "Features",
+          "pages": "Pages",
+          "components": "Components",
+          "utils": "Utils",
+          "services": "Services",
+          "inventory": "Inventory",
+          "context": "Root",
       }
   ],
 ```
