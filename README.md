@@ -41,5 +41,4 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 - [Alias Imports](https://github.com/Sponsor-CX/eslint-plugin-sponsorcx/blob/main/docs/rules/alias-imports.md)
-- [Prefer Alias](https://github.com/Sponsor-CX/eslint-plugin-sponsorcx/blob/main/docs/rules/prefer-alias.md)
 

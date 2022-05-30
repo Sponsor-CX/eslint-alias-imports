@@ -151,6 +151,41 @@ import { CSSProp } from 'styled-components';
           },
         ],
       },
+      {
+        code: `
+// Externals
+import React from 'react';
+import {
+    Button as SemanticButton,
+    Form,
+    Icon,
+    Popup,
+    TextArea,
+} from 'semantic-ui-react';
+import 'styled-components/macro';
+import * as tokens from '@sponsorcx/sponsorcx-style';
+
+// Helpers
+import { formatDollar } from '../../math';
+import { formatEuro } from './math';
+        `,
+        errors: [
+          {
+            message: "Relative imports should not be used. Use an alias instead.",
+            line: 15,
+            endLine: 15,
+            column: 1,
+            endColumn: 43,
+          },
+          {
+            message: "Relative imports should not be used. Use an alias instead.",
+            line: 16,
+            endLine: 16,
+            column: 1,
+            endColumn: 37,
+          },
+        ]
+      },
     ],
   });
 }
