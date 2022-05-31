@@ -52,11 +52,12 @@ import * as tokens from '@sponsorcx/sponsorcx-style';
 // Helpers
 import { formatDollar } from '@/helpers/math';
 
-// Inventory
+// Internals
 import { AgreementInventoryItem } from '@/inventory/interfaces';
 
 // GraphQL
 import { Package, PackageInvRel } from '@/gql/packageGql';
+import { InventoryQuery } from '@/inventory/gql/inventory';
 
 // Modals
 import { calculatePackageInvRelRateFromPackageRate } from '@/modals/PackageCreate';
@@ -118,7 +119,7 @@ import { CSSProp } from 'styled-components';
         `,
         errors: [
           {
-            message: "@/gql should be in a GraphQL group.",
+            message: "@/gql should be in the GraphQL group.",
             line: 4,
             endLine: 4,
             column: 1,
